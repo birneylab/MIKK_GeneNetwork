@@ -1,0 +1,13 @@
+
+include: "rules/00_common.smk"
+include: "rules/01_filter_vcf.smk"
+
+rule all:
+    input:
+#################
+# 00_common.smk
+#################
+        config["trait_ids_file"],
+#################
+# 01_filter_vcf.smk
+#################

@@ -1,0 +1,49 @@
+#####################
+# Locations
+#####################
+working_dir:
+    /hps/nobackup/birney/users/ian/MIKK_GeneNetwork
+lts_dir:
+    /nfs/research/birney/users/ian/MIKK_GeneNetwork
+#####################
+# Variables
+#####################
+contigs:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    - 11
+    - 12
+    - 13
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+#####################
+# Containers
+#####################
+bcftools:
+    docker://quay.io/biocontainers/bcftools:1.10--h5d15f04_0
+#####################
+# Key files
+#####################
+original_vcf:
+    /nfs/research/birney/projects/indigene/datafreeze/14-03-2019/vcf/medaka_inbred_panel_ensembl_new_reference_release_94.vcf.gz
+
+
+
+
