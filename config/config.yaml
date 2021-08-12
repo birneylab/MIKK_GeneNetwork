@@ -5,6 +5,19 @@ working_dir:
     /hps/nobackup/birney/users/ian/MIKK_GeneNetwork
 lts_dir:
     /nfs/research/birney/users/ian/MIKK_GeneNetwork
+log_dir:
+    /hps/nobackup/birney/users/ian/MIKK_GeneNetwork/logs
+#####################
+# Files
+#####################
+original_vcf:
+    /nfs/research/birney/projects/indigene/datafreeze/14-03-2019/vcf/medaka_inbred_panel_ensembl_new_reference_release_94.vcf.gz
+samples_file_rehead:
+    /hps/software/users/birney/ian/repos/MIKK_GeneNetwork/config/cram2line_no-header_marked-dupes.txt
+samples_file_extant_mikk:
+    /hps/software/users/birney/ian/repos/MIKK_GeneNetwork/config/extant_mikk_lines.txt
+samples_file_with_prefix:
+    /hps/software/users/birney/ian/repos/MIKK_GeneNetwork/config/extant_mikk_lines_with_prefix.txt
 #####################
 # Variables
 #####################
@@ -33,16 +46,18 @@ contigs:
     - 22
     - 23
     - 24
+max_AC_Het:
+    63 # Counts the number of (diploid) samples with heterozygous genotypes
+max_F_MISSING:
+    0.5
+min_MQ:
+    1
 #####################
 # Containers
 #####################
 bcftools:
-    docker://quay.io/biocontainers/bcftools:1.10--h5d15f04_0
-#####################
-# Key files
-#####################
-original_vcf:
-    /nfs/research/birney/projects/indigene/datafreeze/14-03-2019/vcf/medaka_inbred_panel_ensembl_new_reference_release_94.vcf.gz
+    docker://quay.io/biocontainers/bcftools:1.13--h3a49de5_0
+
 
 
 

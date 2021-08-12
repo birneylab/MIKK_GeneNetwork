@@ -1,4 +1,3 @@
-
 include: "rules/00_common.smk"
 include: "rules/01_filter_vcf.smk"
 
@@ -7,7 +6,16 @@ rule all:
 #################
 # 00_common.smk
 #################
-        config["trait_ids_file"],
 #################
 # 01_filter_vcf.smk
 #################
+# rehead_vcf
+        os.path.join(config["working_dir"], "mikk_rehead.vcf.gz"),
+# filter_for_mikk
+        os.path.join(config["working_dir"], "mikk_extant.vcf.gz"),
+# annotate_ac
+        os.path.join(config["working_dir"], "mikk_extant_ac.vcf.gz"),
+# filter_variants
+        os.path.join(config["working_dir"], "mikk_filtered.vcf.gz"),
+# add_mikk_prefix
+        os.path.join(config["lts_dir"], "vcfs/mikk_clean.vcf.gz"),
